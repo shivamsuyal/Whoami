@@ -1,0 +1,324 @@
+:root{
+  // --l0 : 0;
+  // --l1 : 0;
+  // --l2 : 0;
+  // --l3 : 0;
+  // --l4 : 0;
+  // --l5 : 0;
+  --g_ani1_time : 2500ms;
+  --o_ani1_time : 3500ms;
+  --o_ani1_del : 2600ms;
+}
+
+@font-face {
+  font-family: "3D Thirteen Pixel Fonts";
+  src: url("../Fonts/3d-thirteen-pixel-fonts.regular.ttf");
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../Fonts/Comfortaa.ttf");
+}
+@font-face {
+  font-family: "cascadia code";
+  src: url("../Fonts/CascadiaCode.ttf");
+}
+@font-face {
+  font-family: "Consolas";
+  src: url("../Fonts/Consolas.ttf");
+}
+@font-face {
+  font-family: "Glitch";
+  src: url("../Fonts/glitch.ttf");
+}
+
+#FRONT{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 200;
+  // display: none; //Imp
+  // opacity: 0; //Imp
+  transition: all 2000ms ease-in-out;
+}
+// #INDEX{
+//   position: relative;
+//   display: block;
+//   opacity: 1;
+//   height: 100vh;
+//   width: 100vw;
+//   transform: scale(1);
+//   transition: all 2000ms ease-in-out;
+// }
+
+
+@font-face {
+  font-family: "3D Thirteen Pixel Fonts";
+  src: url("../Fonts/3d-thirteen-pixel-fonts.regular.ttf");
+}
+@font-face {
+  font-family: "cascadia code";
+  src: url("../Fonts/CascadiaCode.ttf");
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../Fonts/Comfortaa.ttf");
+}
+@font-face {
+  font-family: "Consolas";
+  src: url("../Fonts/Comfortaa.ttf");
+}
+@font-face {
+  font-family: "Glitch";
+  src: url("../Fonts/glitch.ttf");
+}
+
+*{
+  cursor: none !important;
+  scroll-behavior: smooth;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    // overflow-y: hidden !important; //IMP
+    // background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#arrow_box{
+    position: fixed;
+    // position: absolute;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    // background-color: black;
+    // border: 1px solid red;
+    pointer-events: none;
+  }
+  
+  #arrow {
+  position: absolute;
+  clip-path: polygon(0px 0px, 35px 18px, 0px 35px, 8px 16.5px);
+  pointer-events: none;
+  fill: white;
+  // fill: ;
+  transition: fill 150ms ease-in-out;
+  // transition-timing-function: cubic-bezier(0, 1.2, 1, -0.3);
+  // transition-duration: 1s;
+  // animation: arrow_ani1 2s linear infinite;
+  // fill: #00F200;
+}
+
+// $aColor : #00F200;
+
+// @keyframes arrow_ani1 {
+//   // 0%{
+//   //   fill: white;
+//   // }
+//   // 30%{
+//   //   fill: $aColor;
+//   // }
+//   // 60%{
+//   //   fill: white;
+//   // }
+//   // 90%{
+//   //   fill: $aColor;
+//   // }
+//   // 100%{
+//   //   fill: white;
+//   // }
+//   to{
+//     fill: $aColor;
+//   }
+// }
+
+
+#txt{
+  // border: 1px solid red;
+  position: absolute;
+  // z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: Glitch;
+  font-size: unquote("min(22vw,12rem)");
+  // font-size:22vw;
+  text-transform: uppercase;
+  color: black;
+  // color: white;
+  margin: 0;
+  padding: 0;
+  -webkit-text-stroke: white;
+  -webkit-text-stroke-width: 2px;
+  // transition: all 2500ms ease-in-out;
+  // visibility: hidden;
+  opacity: 0;
+  transition: opacity 5000ms ease-in-out ;
+}
+
+#txt::before, #txt::after{
+  // border: 1px solid red;
+  // height: 99.5vh;
+  // width: 99.5vw;
+  // line-height: 1vh;
+  content: "glitch";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-text-stroke: white;
+  -webkit-text-stroke-width: 2px;
+  transition: opacity 3000ms ease-in-out;
+}
+
+#txt::before{
+  left: 10px;
+  text-shadow: 5px 0 #3cd1e9;
+  animation: effect 3500ms infinite linear;
+}
+#txt::after{
+  left: 4px;
+  text-shadow: -5px 0 #ff1d6f;
+  animation: effect 2000ms infinite linear;
+}
+@keyframes effect {
+    0% {
+      clip: rect(12px, 9999px, 63px, 0);
+      opacity: 0;
+    }
+    5% {
+      clip: rect(83px, 9999px, 19px, 0);
+      opacity: 1;
+    }
+    10% {
+      clip: rect(2px, 9999px, 99px, 0);
+    }
+    15% {
+      clip: rect(59px, 9999px, 71px, 0);
+      opacity: 0;
+    }
+    20% {
+      clip: rect(27px, 9999px, 19px, 0);
+    }
+    25% {
+      clip: rect(79px, 9999px, 7px, 0);
+      opacity: 1;
+    }
+    30% {
+      clip: rect(42px, 9999px, 31px, 0);
+    }
+    35% {
+      clip: rect(18px, 9999px, 40px, 0);
+      opacity: 0;
+    }
+    40% {
+      clip: rect(23px, 9999px, 147px, 0);
+      opacity: 1;
+    }
+    45% {
+      clip: rect(45px, 9999px, 112px, 0);
+    }
+    50% {
+      clip: rect(99px, 9999px, 24px, 0);
+      opacity: 0;
+    }
+    55% {
+      clip: rect(19px, 9999px, 30px, 0);
+    }
+    60% {
+      clip: rect(39px, 9999px, 127px, 0);
+      opacity: 1;
+
+    }
+    65% {
+      clip: rect(72px, 9999px, 111px, 0);
+    }
+    70% {
+      clip: rect(95px, 9999px, 90px, 0);
+    }
+    75% {
+      clip: rect(57px, 9999px, 72px, 0);
+    }
+    80% {
+      clip: rect(86px, 9999px, 25px, 0);
+    }
+    85% {
+      clip: rect(16px, 9999px, 94px, 0);
+    }
+    90% {
+      clip: rect(68px, 9999px, 90px, 0);
+    }
+    95% {
+      clip: rect(60px, 9999px, 148px, 0);
+    }
+    100% {
+      clip: rect(80px, 9999px, 115px, 0);
+    }
+  }
+
+#rocket{
+  position: absolute;
+  // border: 1px solid chartreuse;
+  width: 100%;
+  height: 100%;
+  z-index: -100; //imp
+  background-color: black;
+  overflow: hidden;
+  // background-color: red;
+  // animation: small 1000ms 500ms ease-in-out forwards;
+  // transition: all 1000ms ease-in-out;
+  // transform: translateY(-750%);
+  // scale: 0.07;
+  // top: -55%;
+}
+// @keyframes small {
+//   50%{
+//     scale: 0.07;
+//   }
+//   100%{
+//     scale: 0.07;
+//     transform: translateY();
+//   }
+// }
+
+// #blobDiv{
+//     position: absolute;
+//     z-index: -20;
+//     height: 100vh;
+//     width: 100vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+// }
+// .blob{
+//     position: absolute;
+//     mix-blend-mode: difference;
+//     background: #17141d;
+//     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+//     will-change: border-radius, transform, opacity;
+//     animation: blobShape 5s linear infinite;
+//     display: block;
+// }
+// @keyframes blobShape{
+//   0%,100%{
+//   border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+//     transform: translate3d(0,0,0) rotateZ(0.01deg);
+//   }
+//   34%{
+//       border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+//     transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+//   }
+//   50%{
+//     transform: translate3d(0,0,0) rotateZ(0.01deg);
+//   }
+//   67%{
+//     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+//     transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+//   }
+// }
+

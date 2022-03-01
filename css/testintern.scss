@@ -1,0 +1,158 @@
+$color1:#008aff;
+$color2:#00ffe7;
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap');
+
+html,body{
+    padding: 0;
+    margin: 0;
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
+
+    // ::-webkit-scrollbar{
+    //     width: 0;
+    // }
+}
+
+body{
+    font-family: Comfortaa;
+    color: white;
+    background-color: #000A14;
+    // height: 5000px;
+}
+
+#inter_srcoll{
+    position: fixed;
+    padding: 0;
+    height: 90vh;
+    // border: 1px solid white;
+    // width: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: .6rem;
+}
+
+#iscrollFront,#iscrollBack{
+    height: 100%;
+    width: 4px;
+    position: fixed;
+    border-radius: 0.5rem;
+
+}
+
+#iscrollFront{
+    // background: linear-gradient(to right,$color1,$color2);
+    background: radial-gradient($color2,$color1);
+    height: 50%;
+    box-shadow: 0px 0px 10px 5px rgba(0, 255, 231, 0.29);
+}
+
+#iscrollBack{
+    // background-color: rgb(0, 183, 255);
+    background: rgba(131, 131, 131, 0.44);
+}
+
+#intern{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2.6rem;
+    column-gap: 1rem;
+}
+
+#inter_body{
+    flex: 1 1 100%;
+}
+#ibtitle{
+    // border: 1px solid white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+$cardradi : 1rem;
+#inter__card{
+    // border: 1px solid white;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid white;
+    .icard{
+        position: relative;
+        flex: 1 1 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        // border: 1px solid red;
+        .maincard{
+            // background-color: transparent !important;
+
+            width: fit-content;
+            &:hover{
+                .iccontent{
+                    transform: rotateY(.25turn);
+                    box-shadow:none;
+                }
+            }
+            .iccontent{
+                // overflow: hidden;
+                box-shadow: 0px 0px 30px 2px #002A55;
+                border-radius: $cardradi;
+                transition: all 1700ms ease-in-out;
+                transform-style: preserve-3d;
+                padding: 5rem;
+                // background-color: rgb(0, 255, 191);
+                // background-color: rgb(0, 255, 191);
+                background-color: #000A14;
+                width: 100px;
+                // font-family: Poppins;
+                // font-family: 'Montserrat', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                .iccbody__front,.iccbody__back{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+    
+                }
+                .iccbody__front{
+                    flex-direction: column;
+                }
+                .iccbody__back{
+                    border-radius: $cardradi;
+
+                    // background: rgb(0, 204, 255);
+                    background: rgb(0, 255, 191);
+                    // background: #000A14;
+                    transform: rotateY(.75turn);
+                }
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

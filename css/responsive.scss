@@ -1,0 +1,78 @@
+@media only screen and (max-width: 1157px) {
+    #Fmail{
+        border: none;
+        flex: 1 1 100%;
+        margin: auto;
+        padding: 2rem 0;
+    }
+    #eye_wapper{
+        p{
+            padding: 0 5px;
+        }
+    }
+    .Ftext{
+        width: unquote("min(95%,20rem)");
+    }
+}
+
+@media screen and (max-width : 768px) {
+    *{
+        cursor: auto !important;
+    }
+    #arrow_box{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width : 623px) {
+    #back_img1,#back_img2,#back_img3{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #nav{
+        transform: translateX(-50%);
+    }
+    .fContainer div{
+        transform: scale(0.85);
+    }
+    #scroll{
+        visibility: collapse;
+    }
+    #terminal{
+        height: unquote("min(95vh,95vw)");
+        width: unquote("min(95vh,95vw)");
+    }
+}
+@media screen and (max-width:430px){
+    #header span{
+        transform: translateX(-1.5rem);
+    }
+    #Feye{
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width:400px){
+    #eye_wapper{
+        p{
+            padding: 0 30px;
+        }
+    }
+}
+@media screen and (max-width:381px){
+    #eye_wapper{
+        transform: scale(0.8);
+    }
+    .Ftext{
+        width: 90%;
+    }
+}
+@media screen and (max-width:331px){
+    .Ftext{
+        width: 90%;
+    }
+}
+
+
