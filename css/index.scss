@@ -1,4 +1,4 @@
-// Not Hidden , In Development
+// // Not Hidden , In Development
 // #Main{
 //     opacity: 1 !important;
 // }
@@ -12,7 +12,7 @@
 // #rocket{
 //     z-index: -100 !important; //imp
 // }
-// Not Hidden , In Development
+// // Not Hidden , In Development
 
 
 :root{
@@ -701,13 +701,6 @@ html,body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // padding-bottom: 1rem;
-//     background-size:contain;
-//     background-repeat:no-repeat;
-//     background-position:center;
-//     background-attachment: fixed;
-//     background-image: url("");
-//     transition: background-image 1000ms ease-in-out;
     p{
         font-size: 3rem;
     }
@@ -938,8 +931,8 @@ html,body{
         outline: none;
         background-color: transparent;
         color: white;
-        font-size: 1.1rem;
-        font-family: Comfortaa;
+        font-size: 1rem;
+        font-family: Poppins;
         &:hover {
             border-color: $clr-primary-light;
         }

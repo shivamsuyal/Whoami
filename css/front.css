@@ -1,32 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins&display=swap");
 :root {
   --g_ani1_time: 2500ms;
   --o_ani1_time: 3500ms;
   --o_ani1_del: 2600ms;
-}
-
-@font-face {
-  font-family: "3D Thirteen Pixel Fonts";
-  src: url("../Fonts/3d-thirteen-pixel-fonts.regular.ttf");
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("../Fonts/Comfortaa.ttf");
-}
-
-@font-face {
-  font-family: "cascadia code";
-  src: url("../Fonts/CascadiaCode.ttf");
-}
-
-@font-face {
-  font-family: "Consolas";
-  src: url("../Fonts/Consolas.ttf");
-}
-
-@font-face {
-  font-family: "Glitch";
-  src: url("../Fonts/glitch.ttf");
 }
 
 #FRONT {
@@ -49,13 +25,8 @@
 }
 
 @font-face {
-  font-family: "Comfortaa";
-  src: url("../Fonts/Comfortaa.ttf");
-}
-
-@font-face {
   font-family: "Consolas";
-  src: url("../Fonts/Comfortaa.ttf");
+  src: url("../Fonts/Consolas.ttf");
 }
 
 @font-face {
