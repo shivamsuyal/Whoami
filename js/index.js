@@ -243,36 +243,36 @@ if($(window).width() >= 550){
 
 
 /* About */
-$("#cmd_area").niceScroll({
-  autohidemode: false,
-  cursorborder: 'none',
-  scrollspeed: 100,
-  touchbehavior :true,
-  cursorwidth :8,
-  background:"#23252E",
-  railpadding:{top:10,right:0,left:0,bottom:0}
-})
+// $("#cmd_area").niceScroll({
+//   autohidemode: false,
+//   cursorborder: 'none',
+//   scrollspeed: 100,
+//   touchbehavior :true,
+//   cursorwidth :8,
+//   background:"#23252E",
+//   railpadding:{top:10,right:0,left:0,bottom:0}
+// })
 
 
-$(window).resize(()=>{
-  var terminal = $("#terminal");
-  var terminalH = terminal.height();
-  var terminalW = terminal.width();
+// $(window).resize(()=>{
+//   var terminal = $("#terminal");
+//   var terminalH = terminal.height();
+//   var terminalW = terminal.width();
 
-  $("#redArea p").text(`${Math.round(terminalH)} x ${Math.round(terminalW)}`)
+//   $("#redArea p").text(`${Math.round(terminalH)} x ${Math.round(terminalW)}`)
   
-  // $("#footer_wapper").css({
-  //   "height":$("#Fmail").height()+$("#Contact").height()+"px"
-  // })
+//   // $("#footer_wapper").css({
+//   //   "height":$("#Fmail").height()+$("#Contact").height()+"px"
+//   // })
 
-})
+// })
 
 var terminal = $("#terminal");
 var terminalH = terminal.height();
 var terminalW = terminal.width();
 
 var badge = $("#badge1").html()
-console.log(badge)
+// console.log(badge)
 
 $("#redArea p").text(`${Math.round(terminalH)} x ${Math.round(terminalW)}`)
 
@@ -323,7 +323,9 @@ function exit(){
 
 $("#exit").click(exit)
 $("#terminal_section").click(exit)
-
+const cmdScroll = document.getElementById('cmd_scroll')
+const cmdArea = document.getElementById('cmd_area')
+let iH,th;
 $("#aboutBnt").click(()=>{
   $("body").css("overflow","hidden")
   $("#cmd_area").html(`<div class="pre_cmd"><p>u0_a126</p><p>∆ Engima [</p><p>#</p><p>]</p><p>---------------</p></div><div class="prompt"><p>=></p><p class="cmd1">whoami</p><div id="cmd2"></div></div>`)
@@ -332,8 +334,34 @@ $("#aboutBnt").click(()=>{
       $(this).html(whoami_html)
       $("#cmd_area").append(whoami_append+"<br><br><br>")
       $(this).dequeue()
+      cmdScroll.style.display="block"
+    
+      iH = cmdArea.offsetHeight
+      th = cmdArea.scrollHeight-iH
+      console.log(iH,th)
   })
+  
 })
+// const txt=document.getElementById('cmd_area')
+$("#cmd_area").scroll(function (event) {
+  // console.log(event.target)
+  // var iH = event.target.offsetHeight
+  // var th = event.target.scrollHeight-iH
+  console.log(`th ${th}   iH : ${iH}`)
+  if (th==0){
+    document.documentElement.style.setProperty('--scrollH','100%');
+  }else{
+    var spH = iH/14
+    var sH = iH*spH/100
+    var tmp = ((txt.scrollTop)/th)*(iH-sH)
+    document.documentElement.style.setProperty('--scrollH',spH+'%');
+    document.documentElement.style.setProperty('--topSpace',tmp+'px');
+    console.log(`tmp ${tmp}   sph : ${sph}`)
+    // $("#content").scroll(function () { 
+    //     var tmp = ((txt.scrollTop)/th)*(iH-sH)
+    // });
+  }
+});
 
 $("#minimize").hover(function () {
   // over
@@ -493,6 +521,12 @@ $(window).resize(function () {
     })
   }
   
+  // TEST
+  iH = cmdArea.offsetHeight
+  th = cmdArea.scrollHeight-iH
+  console.log(`th ${th}   iH : ${iH}`)
+
+  // TEST
 
   // Terminal
     var terminal = $("#terminal");
@@ -527,4 +561,5 @@ setTimeout(()=>{
 
 
 
-
+// TEST
+// $('#aboutBnt').click()

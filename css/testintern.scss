@@ -6,19 +6,20 @@ $color2:#00ffe7;
 html,body{
     padding: 0;
     margin: 0;
-    // -ms-overflow-style: none;
-    // scrollbar-width: none;
+    // -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    // scrollbar-width: none; /* for Firefox */
+    // overflow-y: scroll;
 
-    // ::-webkit-scrollbar{
-    //     width: 0;
+    // &::-webkit-scrollbar{
+    //     display: none;
     // }
 }
-
 body{
     font-family: Comfortaa;
     color: white;
     background-color: #000A14;
     // height: 5000px;
+    
 }
 
 #inter_srcoll{
@@ -80,9 +81,9 @@ $cardradi : 1rem;
     .icard{
         position: relative;
         flex: 1 1 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         padding: 0 1rem;
         // border: 1px solid red;
         .maincard{
@@ -105,6 +106,8 @@ $cardradi : 1rem;
                 // background-color: rgb(0, 255, 191);
                 // background-color: rgb(0, 255, 191);
                 background-color: #000A14;
+                // background-image: url("../img/intern1_OurFaith.png");
+                // background-position: center;
                 width: 100px;
                 // font-family: Poppins;
                 // font-family: 'Montserrat', sans-serif;
@@ -123,6 +126,20 @@ $cardradi : 1rem;
                 }
                 .iccbody__front{
                     flex-direction: column;
+                    // background-image: attr(data-img);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    // background-color: #008aff;
+                    // .iccblogo{
+                    //     // width: 100%;
+                    //     // height: 100%;
+                    //     // height: 25px;
+                    //     img{
+                    //         height: 100px;
+                    //         display: none;
+                    //     }
+                    // }
                 }
                 .iccbody__back{
                     border-radius: $cardradi;

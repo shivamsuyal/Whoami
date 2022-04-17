@@ -1,4 +1,4 @@
-// // Not Hidden , In Development
+// Not Hidden , In Development
 // #Main{
 //     opacity: 1 !important;
 // }
@@ -12,7 +12,7 @@
 // #rocket{
 //     z-index: -100 !important; //imp
 // }
-// // Not Hidden , In Development
+// Not Hidden , In Development
 
 
 :root{
@@ -27,7 +27,8 @@
     --color_up_delay:3400ms;
     --showEye:2000ms;
     --delay_eye:3800ms;
-    
+    --scrollH : 0%;
+    --topSpace:0px;
 }
 $gBlue:#3cd1e9;
 $gPink:#ff1d6f;
@@ -450,8 +451,9 @@ html,body{
 
 #cmd_area{
     display: flex;
+    flex: 1 1 90%;
     flex-direction: column;
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 0 1rem 1rem;
     padding: 0.5rem 1rem 0 0.5rem;
     // min-height: 75vh;
     height: var(--cmdH);
@@ -459,7 +461,13 @@ html,body{
     font-family: 'cascadia code';
     background-color: #1F1726;
     font-variant-ligatures: common-ligatures;
-        
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+    
     .pre_cmd{
         font-size: 1.1rem;
         p{
@@ -546,7 +554,27 @@ html,body{
         }
     }
 }
-
+#cmd_scroll{
+    background-color: grey;
+    position: relative;
+    top: 2px;
+    display: none;
+    height: var(--cmdH);
+    width: 1rem;
+    &::before{
+        content: ' ';
+        border-radius: 1.5rem;
+        position: absolute;
+        top: var(--topSpace);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: var(--scrollH);
+        // max-height: 10px;
+        max-width: 1rem;
+        background-color: aquamarine;
+    }
+}
 @keyframes typewriter {
     70%{
         left: 99%;
