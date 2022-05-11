@@ -380,7 +380,6 @@ html,body{
     height: 95%;
     width: 70vw;
     border-radius: 0.8rem 0.8rem 0 0;
-
     #header{
         margin: 0.6rem 0 0 0;
         display: flex;
@@ -555,11 +554,12 @@ html,body{
     }
 }
 #cmd_scroll{
-    background-color: grey;
+    background-color: #23252E;
     position: relative;
     top: 2px;
-    display: none;
+    // display: none;
     height: var(--cmdH);
+    border-radius: 1.5rem;
     width: 1rem;
     &::before{
         content: ' ';

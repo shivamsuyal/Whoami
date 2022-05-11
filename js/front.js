@@ -114,7 +114,7 @@ class Ticker {
   }
 /* ARROW FOLLOW ANIMATION */
 $(window).click(function(e){
-  console.log(e.target)
+  // console.log(e.target)
 })
 
 setTimeout(()=>{

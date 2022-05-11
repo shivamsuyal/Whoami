@@ -235,7 +235,7 @@ rootMargin : "10% 0px -30% 0px",
 // Window width
 let sO = 0
 if($(window).width() >= 550){
-  console.log($(window).width(),"in")
+  // console.log($(window).width(),"in")
   sO = 1
   skillObs.observe(document.getElementById("Skills"));
 }
@@ -328,40 +328,44 @@ const cmdArea = document.getElementById('cmd_area')
 let iH,th;
 $("#aboutBnt").click(()=>{
   $("body").css("overflow","hidden")
-  $("#cmd_area").html(`<div class="pre_cmd"><p>u0_a126</p><p>∆ Engima [</p><p>#</p><p>]</p><p>---------------</p></div><div class="prompt"><p>=></p><p class="cmd1">whoami</p><div id="cmd2"></div></div>`)
+  $("#cmd_area").html(`<div class="pre_cmd"><p>u0_a126</p><p> ∆ Engima [</p><p>#</p><p>]</p><p>---------------</p></div><div class="prompt"><p>=></p><p class="cmd1">whoami</p><div id="cmd2"></div></div>`)
   $("#terminal_section").css({"opacity":"1","z-index":500,"display":"flex"})
   $("#cmd2").delay(4000).queue(function(){
       $(this).html(whoami_html)
       $("#cmd_area").append(whoami_append+"<br><br><br>")
       $(this).dequeue()
-      cmdScroll.style.display="block"
-    
+      // cmdScroll.style.display="block"
       iH = cmdArea.offsetHeight
       th = cmdArea.scrollHeight-iH
-      console.log(iH,th)
+      if (cmdArea.scrollHeight > cmdArea.clientHeight){
+        document.documentElement.style.setProperty('--scrollH',iH/14+'%');
+        cmdScroll.style.backgroundColor="grey"
+        cmdArea.onscroll = cmdAreaScroll
+      }
+      // console.log(iH,th)
   })
   
 })
 // const txt=document.getElementById('cmd_area')
-$("#cmd_area").scroll(function (event) {
+function cmdAreaScroll(){
   // console.log(event.target)
   // var iH = event.target.offsetHeight
   // var th = event.target.scrollHeight-iH
-  console.log(`th ${th}   iH : ${iH}`)
+  // console.log(`th ${th}   iH : ${iH}`)
   if (th==0){
     document.documentElement.style.setProperty('--scrollH','100%');
   }else{
     var spH = iH/14
     var sH = iH*spH/100
-    var tmp = ((txt.scrollTop)/th)*(iH-sH)
+    var tmp = ((cmdArea.scrollTop)/th)*(iH-sH)
     document.documentElement.style.setProperty('--scrollH',spH+'%');
     document.documentElement.style.setProperty('--topSpace',tmp+'px');
-    console.log(`tmp ${tmp}   sph : ${sph}`)
+    // console.log(`tmp ${tmp}   sph : ${spH}`)
     // $("#content").scroll(function () { 
     //     var tmp = ((txt.scrollTop)/th)*(iH-sH)
     // });
   }
-});
+}
 
 $("#minimize").hover(function () {
   // over
@@ -500,7 +504,7 @@ window.onscroll = function(){
 }
 
 $(window).resize(function () {
-  console.log("window Resize")
+  // console.log("window Resize")
   // CANVAS
     renderer.setSize(window.innerWidth,window.innerHeight)
     camera.aspect = window.innerWidth/window.innerHeight
@@ -524,7 +528,7 @@ $(window).resize(function () {
   // TEST
   iH = cmdArea.offsetHeight
   th = cmdArea.scrollHeight-iH
-  console.log(`th ${th}   iH : ${iH}`)
+  // console.log(`th ${th}   iH : ${iH}`)
 
   // TEST
 

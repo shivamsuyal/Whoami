@@ -10,6 +10,7 @@
   height: 100vh;
   width: 100vw;
   z-index: 200;
+  -webkit-transition: all 2000ms ease-in-out;
   transition: all 2000ms ease-in-out;
 }
 
@@ -17,18 +18,22 @@
   font-family: "3D Thirteen Pixel Fonts";
   src: url("../Fonts/3d-thirteen-pixel-fonts.regular.ttf");
 }
+
 @font-face {
   font-family: "cascadia code";
   src: url("../Fonts/CascadiaCode.ttf");
 }
+
 @font-face {
   font-family: "Consolas";
   src: url("../Fonts/Consolas.ttf");
 }
+
 @font-face {
   font-family: "Glitch";
   src: url("../Fonts/glitch.ttf");
 }
+
 * {
   cursor: none !important;
   scroll-behavior: smooth;
@@ -59,6 +64,7 @@ body {
           clip-path: polygon(0px 0px, 35px 18px, 0px 35px, 8px 16.5px);
   pointer-events: none;
   fill: white;
+  -webkit-transition: fill 150ms ease-in-out;
   transition: fill 150ms ease-in-out;
 }
 
@@ -66,7 +72,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-family: Glitch;
   font-size: min(22vw,12rem);
   text-transform: uppercase;
@@ -76,6 +83,7 @@ body {
   -webkit-text-stroke: white;
   -webkit-text-stroke-width: 2px;
   opacity: 0;
+  -webkit-transition: opacity 5000ms ease-in-out;
   transition: opacity 5000ms ease-in-out;
 }
 
@@ -88,6 +96,7 @@ body {
   overflow: hidden;
   -webkit-text-stroke: white;
   -webkit-text-stroke-width: 2px;
+  -webkit-transition: opacity 3000ms ease-in-out;
   transition: opacity 3000ms ease-in-out;
 }
 
@@ -252,6 +261,7 @@ body {
     clip: rect(80px, 9999px, 115px, 0);
   }
 }
+
 #rocket {
   position: absolute;
   width: 100%;
@@ -259,4 +269,5 @@ body {
   z-index: -100;
   background-color: black;
   overflow: hidden;
-}/*# sourceMappingURL=front.css.map */
+}
+/*# sourceMappingURL=front.css.map */
