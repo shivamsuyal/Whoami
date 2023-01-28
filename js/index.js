@@ -567,3 +567,12 @@ setTimeout(()=>{
 
 // TEST
 // $('#aboutBnt').click()
+const form1 = document.forms[0]
+const email_name = document.getElementById("email_name")
+const subject = document.getElementById("subject")
+const MmsgTextarea = document.querySelector("#Mmsg textarea")
+Msend.onclick = ()=>{
+  if(form1.reportValidity()){
+    window.location.href = `mailto:shivamsuyal25@gmail.com?subject=${subject.value.trim()}&body=${MmsgTextarea.value.trim()}&comment=${email_name.value.trim()}`
+  }
+}

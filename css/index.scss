@@ -48,6 +48,10 @@ $radius: 0.5rem;
 *{
     user-select: none;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 html{
     -ms-overflow-style: none;
@@ -334,7 +338,7 @@ html,body{
             // }
         }
     }   
-    span{
+    span,#intern{
         // border: 1px dotted white;
         position: relative;
         border-radius: 1rem;
@@ -346,6 +350,16 @@ html,body{
 }
 
 /* Home */
+
+// #intern{
+//         text-decoration: none;
+//         // width: 100%;
+//         // // height: 100%;
+//         // padding: 0;
+//         // margin: 0;
+//         // text-align: center;
+//         color: inherit;
+// }
 
 
 /* About */
@@ -960,6 +974,7 @@ html,body{
         background-color: transparent;
         color: white;
         font-size: 1rem;
+        padding: 0 0.3rem;
         font-family: Poppins;
         &:hover {
             border-color: $clr-primary-light;
@@ -1039,7 +1054,7 @@ html,body{
             &:hover{
                 // background: rgba(255,255,255,0.1);
                 svg{
-                    transform: scale(1.3);
+                    transform: scale(1.1);
                 }
                 p{
                     transform: translateY(0rem);
