@@ -1,1 +1,1 @@
-# [`Glitch`](https://shivamsuyal.github.io/Whoami/html/) Portfolio
+# [`Glitch`](https://shivamsuyal.github.io/Whoami/) Portfolio
